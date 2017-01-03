@@ -1,0 +1,44 @@
+label{
+	color:red;
+	margin-right:0.5%;
+}
+form{
+	margin: 10% 40% 10% 40%;
+}
+#login{
+	width:60%;
+	border-radius:15px;
+	background-color:white;
+	border-bottom-color:red;
+	margin-top:10%;
+	font-size:1em;
+}
+input[type='text']{
+	border:2px;
+	border-radius:20px;
+	height:5%;
+	width:80%;
+}
+input[type='text']:hover{
+	width:90%;
+	border-radius:0;
+}
+input[type='password']{
+	border:2px;
+	border-radius:20px;
+	height:5%;
+	width:80%;
+}
+input[type='password']:hover{
+	width:90%;
+	border-radius:0;
+}
+#error b{
+	color:red;
+	font-size:2em;
+}
+#error p{
+	font-family:arial;
+	font-size:0.8em;
+	color:green;
+}

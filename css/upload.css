@@ -1,0 +1,50 @@
+#upload{
+	width:60%;
+	margin:10% 20% 10% 20%;
+}
+fieldset { border:1px solid green;
+  padding: 1em;
+  font:80%/1 sans-serif;
+ }
+
+legend {
+  padding: 0.2em 0.5em;
+  border:1px solid green;
+  color:green;
+  font-size:90%;
+  text-align:right;
+  }
+  label {
+  float:left;
+  width:25%;
+  margin-right:0.5em;
+  padding-top:0.2em;
+  text-align:right;
+  font-weight:bold;
+  }
+input[type='file']{
+	visibility:hidden;
+}
+#custom{
+	width:100%;
+	color:white;
+	background-color:red;
+	border-radius:5px;
+	font-size:2em;
+	cursor:pointer;
+}
+#main{
+	display:flex;
+}
+input[type='submit'],#clear{
+	background-color:orange;
+	border:1px;
+	font-size:1.5em;
+}
+input[type='submit']:hover,#clear:hover{
+	background-color:green;
+	border-bottom-color:red;
+}
+#clear{
+	margin:0 130px 0 -60px;
+}
