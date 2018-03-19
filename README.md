@@ -4,6 +4,8 @@ Store anything online
 ###  -create database
 ###  -improve UI
 ###  -Add on
+#### --Image clustering added
+#### --Image classification added
 
 
 # Team Members:
