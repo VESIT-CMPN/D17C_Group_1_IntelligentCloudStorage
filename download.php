@@ -17,7 +17,9 @@
 					<article>
 						<header>';
 							echo '<p>Welcome! ' . $user . '</p>
+						
 						</header>
+						<span style="float:right;margin-right:10px;"><a href="upload.php">Upload</a></span>
 						<span style="float:right;margin-right:10px;"><a href="index.php">Logout</a></span>
 					</article>
 					<article>
