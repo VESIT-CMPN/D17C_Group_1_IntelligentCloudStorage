@@ -25,7 +25,7 @@ require 'connect.php';
 */
 
 
-$dir="./docs/";
+$dir="./mix/";
 $user=$name;
 $new_dir=$dir . $user;
 
