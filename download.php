@@ -43,8 +43,12 @@
 					. $res[$i-1]['fname'] . '</p></td><td><a href="./get.php?file='
 					. $res[$i-1]['filepath'] .'" targent="_blank">download</a></td></tr>';
 				}
-			}
-		echo '</table></body></html>';
+
+				echo '</table></body></html>';
+				$db->disconnect();
+			}else{
+				echo 'Database connection error';
+			}	
 	}
 	else
 	{

@@ -5,6 +5,7 @@
  */
 
 // Auth with login/password (set true/false to enable/disable it)
+session_start();
 $use_auth = true;
 
 // Users: array('Username' => 'Password', 'Username2' => 'Password2', ...)
@@ -22,7 +23,8 @@ $highlightjs_style = 'vs';
 $default_timezone = 'Europe/Minsk'; // UTC+3
 
 // Root path for file manager
-$root_path = $_SERVER['DOCUMENT_ROOT'];
+$path = "drive/" . $_SESSION["username"] . "/Images";
+$root_path = $path;//$_SERVER['DOCUMENT_ROOT'];
 
 // Root url for links in file manager.Relative to $http_host. Variants: '', 'path/to/subfolder'
 // Will not working if $root_path will be outside of server document root
@@ -55,9 +57,10 @@ if (defined('FM_EMBED')) {
         mb_regex_encoding('UTF-8');
     }
 
+    /*
     session_cache_limiter('');
     session_name('filemanager');
-    session_start();
+    session_start();*/
 }
 
 if (empty($auth_users)) {

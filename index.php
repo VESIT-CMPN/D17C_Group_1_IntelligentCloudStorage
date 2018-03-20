@@ -47,7 +47,7 @@
 			$db->sql($query);
 			
 			$res = $db->getResult();
-
+			$db->disconnect();
 			if(count($res) == 1){
 				
 				$_SESSION['username']= $user ;

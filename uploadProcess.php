@@ -27,9 +27,10 @@
                 */
 
 
-                $dir="./mix/";
+                $dir="./drive/";
                 $user=$name;
-                $new_dir=$dir . $user;
+                $mix = "/mix";
+                $new_dir=$dir . $user . $mix;
 
                 if(!file_exists($new_dir))
                 {
@@ -96,6 +97,9 @@
                     $db->sql($query);
                     $res = $db->getResult();
                     print_r($res);
+
+                    $db->disconnect();
+                    header('Location:upload.php');
                 }else{
                     echo 'Database Connection error';
                 }
