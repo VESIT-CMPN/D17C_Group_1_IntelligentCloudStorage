@@ -1,0 +1,7 @@
+py -2
+py -3
+
+py -2   -m pip install SomePackage  # default Python 2
+py -2.7 -m pip install SomePackage  # specifically Python 2.7
+py -3   -m pip install SomePackage  # default Python 3
+py -3.4 -m pip install SomePackage  # specifically Python 3.4

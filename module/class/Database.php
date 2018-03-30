@@ -8,9 +8,9 @@ class Database{
 	 * Database class
 	 */
 	private $db_host = "localhost";  // Change as required
-	private $db_user = "pravin";  // Change as required
-	private $db_pass = "pravin";  // Change as required
-	private $db_name = "cloudStorage";	// Change as required
+	private $db_user = "azure";  // Change as required
+	private $db_pass = "6#vWHD_$";  // Change as required
+	private $db_name = "cloudstorage";	// Change as required
 	
 	/*
 	 * Extra variables that are required by other function such as boolean con variable

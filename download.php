@@ -30,6 +30,7 @@
 			require './module/class/Database.php';
 
 			$db = new Database();
+			
 			if($db->connect()){
 				$query="SELECT fname,filepath  from details where username='". $user. "'";
 

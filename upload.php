@@ -21,7 +21,9 @@ if($_SESSION['login']===1)
 			</header>
 			<p>welcome , <?php echo $_SESSION['username']; ?>
 			<span style="float:right;margin-right:10px;"><a href="filemanager.php">File Manager</a></span>
+			<span style="float:right;margin-right:10px;"><a href="download.php">Download Files</a></span>
 			<span style="float:right;margin-right:10px;"><a href="index.php">Logout</a></span>
+
 			<!--<span style="float:right;margin-right:10px;"><a href="download.php">Download File</a></span></p>-->
 		</section>
 		<section>

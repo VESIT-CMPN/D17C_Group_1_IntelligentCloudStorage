@@ -11,6 +11,7 @@ $use_auth = true;
 // Users: array('Username' => 'Password', 'Username2' => 'Password2', ...)
 $auth_users = array(
     'fm_admin' => 'fm_admin',
+    'admin'=>'root'
 );
 
 // Enable highlight.js (https://highlightjs.org/) on view's page
@@ -126,6 +127,7 @@ if ($use_auth) {
                 <input type="submit" value="Login">
             </form>
         </div>
+        <div><a href="./upload.php">Upload More Files</a></div>
         <?php
         fm_show_footer();
         exit;

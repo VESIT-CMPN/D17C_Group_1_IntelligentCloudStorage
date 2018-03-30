@@ -21,7 +21,7 @@ function sendHeaders($file, $type, $name=NULL)
 * detect mime of the file type
 */
 require 'mime_type_lib.php';
-$mime_type = get_file_mime_type( './drive/'. $user . '/'. $_GET['file']);
+$mime_type = get_file_mime_type( './drive/'. $user . '/mix/'. $_GET['file']);
 $file ='./drive/' . $user . '/' . $_GET['file'];
 if (is_file($file))
 {
