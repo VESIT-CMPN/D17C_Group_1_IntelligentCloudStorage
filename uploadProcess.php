@@ -9,19 +9,40 @@
             ini_set('max_execution_time', 3000);
             session_start();
             
-            function startIntelligentAnalysis(){
-                $python='C:\\Python27\\python.exe';
-                $file = 'C:\\xampp\\htdocs\\CloudStorage\\drive\\' . $_SESSION["username"] . '\\Image_Classification_Clustering.py';
-                $cmd= "$python  $file";
-                echo $cmd;
-                exec("$cmd",$output);
-                print_r($output);
-            }
+            function getLabel($fname){
+                $target_url = "http://suzukinakamura.pythonanywhere.com/upload";
 
+                $cfile = new CURLFile(realpath($fname));
+
+                    $post = array (
+                            'image' => $cfile
+                            );    
+
+                $ch = curl_init();
+                curl_setopt($ch, CURLOPT_URL, $target_url);
+                curl_setopt($ch, CURLOPT_POST, 1);
+                curl_setopt($ch, CURLOPT_HEADER, 0);
+                curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1); 
+                curl_setopt($ch, CURLOPT_USERAGENT, "Mozilla/4.0 (compatible;)");   
+                curl_setopt($ch, CURLOPT_HTTPHEADER,array('Content-Type: multipart/form-data'));
+                curl_setopt($ch, CURLOPT_FRESH_CONNECT, 1);   
+                curl_setopt($ch, CURLOPT_FORBID_REUSE, 1);  
+                curl_setopt($ch, CURLOPT_TIMEOUT, 100);
+                curl_setopt($ch, CURLOPT_POSTFIELDS, $post);
+
+                $result = curl_exec ($ch);
+
+                if ($result === FALSE) {
+                    curl_close ($ch);
+                     return "Error sending";
+                }else{
+                    curl_close ($ch);
+                    return $result;
+                }
+            }
+           
             if(isset($_GET["debug"])){
-                echo "analysis started<br>";
-                startIntelligentAnalysis();
-                echo "<br>Analysis Ended";
+                echo 'debug mode';
             }else {
                 # code...
                 if($_SESSION['login']===1)
@@ -45,8 +66,8 @@
                     $dir="./drive/";
                     $user=$name;
                     $mix = "/mix";
+                    $base_dir=$dir . $user;
                     $new_dir=$dir . $user . $mix;
-
                     if(!file_exists($new_dir))
                     {
                         mkdir($new_dir, 0700);
@@ -60,6 +81,7 @@
                     */
                     $target_dir = $new_dir . '/';
                     $target_file = $target_dir . basename($_FILES["fileToUpload"]["name"]);
+                    $fileName=basename($_FILES["fileToUpload"]["name"]);
                     $uploadOk = 1;
                     $imageFileType = pathinfo($target_file,PATHINFO_EXTENSION);
                     
@@ -75,11 +97,13 @@
                         }
                     }
                     
+                    /*
                     // Check if file already exists
                     if (file_exists($target_file)) {
                         echo "Sorry, file already exists.";
                         $uploadOk = 0;
                     }
+                    */
                     
                     // Check file size
                     if ($_FILES["fileToUpload"]["size"] > 500000000) {
@@ -93,9 +117,15 @@
                     
                         // if everything is ok, try to upload file
                     } else {
-                        if (move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], $target_file)) {
+                        $new_folder = getLabel($target_file);
+                        echo '<br>Target File name: ' . $target_file;
+                        echo '<br>new folder label: ' . $new_folder;
+
+                        $new_path = $base_dir . '/Images/' . $new_folder . '/' . $fileName;
+                        echo "<br>new path: $new_path";
+
+                        if (move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], $new_path)) {
                             echo "The file ". basename( $_FILES["fileToUpload"]["name"]). " has been uploaded.";
-                            $fileName=basename($_FILES["fileToUpload"]["name"]);
                         } else {
                             echo "Sorry, there was an error uploading your file.";
                         }
@@ -114,8 +144,11 @@
                         print_r($res);
 
                         $db->disconnect();
-                        startIntelligentAnalysis();
-                        header('Location:upload.php');
+                        echo '<script language="javascript">';
+                        echo 'alert("uploaded to => ' . $new_folder . '");';
+                        echo 'window.location = "upload.php"';
+                        echo '</script>';
+                        //header('Location:upload.php');
                     }else{
                         echo 'Database Connection error';
                     }
