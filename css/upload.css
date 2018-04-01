@@ -1,18 +1,55 @@
+@import url('https://fonts.googleapis.com/css?family=Catamaran:400,800,900');
+@import url('https://fonts.googleapis.com/css?family=Raleway:500');
+
+h1 {
+  font-family: 'Catamaran', sans-serif;
+
+}
+p{
+  font-family: 'Catamaran', sans-serif;
+
+}
+a{
+text-decoration:none;
+color: #263238; 
+border:1px solid gold;
+padding:3px;
+border-radius:3px;
+}
+a:hover{
+  text-decoration:none;
+  color:white;
+  background-color:gold;
+
+}
 #upload{
 	width:60%;
 	margin:10% 20% 10% 20%;
 }
-fieldset { border:1px solid green;
+fieldset { 
+  border: 0;
   padding: 1em;
   font:80%/1 sans-serif;
  }
+h3{
+ letter-spacing:1px;
+  font-family: 56px bold 'Raleway', sans-serif;
+  font-size:20px;
+  color:black;
+  border:2px solid gold;
+  border-radius:5px;
+  padding:5px;
+  margin-left:-5px;
 
+}
 legend {
+  
   padding: 0.2em 0.5em;
-  border:1px solid green;
+  border:0;
   color:green;
   font-size:90%;
-  text-align:right;
+  text-align:left;
+  height:15%;
   }
   label {
   float:left;
@@ -21,30 +58,145 @@ legend {
   padding-top:0.2em;
   text-align:right;
   font-weight:bold;
+  height:15%;
   }
 input[type='file']{
 	visibility:hidden;
 }
+.formentry{
+  height:15%;
+}
+input[type=text]{
+  border:0;
+  width:40%;
+  height:15%;
+  border:2px solid #E0E0E0;
+  border-radius:4px;
+  height:15px;
+}
+input[name=quest]{
+  border:0;
+  width:40%;
+  border:2px solid #E0E0E0;
+  border-radius:4px;
+  height:15px;
+}
 #custom{
+  margin-top:20px;
 	width:100%;
-	color:white;
-	background-color:red;
+	color:black;
+  border:2px solid ;
+  padding:5px;
 	border-radius:5px;
 	font-size:2em;
 	cursor:pointer;
 }
+#custom:hover{
+  color:white;
+  background-color:gold;
+}
 #main{
 	display:flex;
 }
-input[type='submit'],#clear{
-	background-color:orange;
-	border:1px;
-	font-size:1.5em;
+input[type='Submit']{
+	background-color:white;
+	border:2px solid black;
+	font-size:2em;
+  margin-left:3em;
+  height:2em;
+  margin-top:-5px;
+  border-radius:4px;
 }
-input[type='submit']:hover,#clear:hover{
-	background-color:green;
-	border-bottom-color:red;
+input[type='Submit']:hover{
+	background-color:gold;
+	border:0;
 }
-#clear{
-	margin:0 130px 0 -60px;
+input[type='Reset']{
+	background-color:white;
+	border:2px solid black;
+	font-size:2em;
+  margin-left:15em;
+  height:2em;
+  margin-top:-5px;
+  border-radius:4px;
+}
+input[type='Reset']:hover{
+	background-color:gold;
+	border:0;
+}
+
+
+#footersection{
+  background-color:black;
+  width:100%;
+  height:20%;
+
+}
+
+
+.footer-basic-centered{
+  position:absolute;
+	background-color: #292c2f;
+	box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);
+	box-sizing: border-box;
+	width: 100%;
+	text-align: center;
+	font: normal 18px sans-serif;
+  left:0;
+  right:0;
+  bottom:0;
+	padding: 45px;
+	margin-top: 0px;
+}
+
+.footer-basic-centered .footer-company-motto{
+	color:  #8d9093;
+	font-size: 24px;
+	margin: 0;
+}
+
+.footer-basic-centered .footer-company-name{
+	color:  #8f9296;
+	font-size: 14px;
+	margin: 0;
+}
+
+.footer-basic-centered .footer-links{
+	list-style: none;
+	font-weight: bold;
+	color:  #ffffff;
+	padding: 35px 0 23px;
+	margin: 0;
+}
+
+.footer-basic-centered .footer-links a{
+	display:inline-block;
+	text-decoration: none;
+	color: inherit;
+}
+
+/* If you don't want the footer to be responsive, remove these media queries */
+
+@media (max-width: 600px) {
+
+	.footer-basic-centered{
+		padding: 35px;
+	}
+
+	.footer-basic-centered .footer-company-motto{
+		font-size: 18px;
+	}
+
+	.footer-basic-centered .footer-company-name{
+		font-size: 12px;
+	}
+
+	.footer-basic-centered .footer-links{
+		font-size: 14px;
+		padding: 25px 0 20px;
+	}
+
+	.footer-basic-centered .footer-links a{
+		line-height: 1.8;
+	}
 }
