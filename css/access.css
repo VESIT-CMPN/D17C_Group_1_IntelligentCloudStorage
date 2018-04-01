@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css?family=Catamaran:900');
+@import url('https://fonts.googleapis.com/css?family=Dosis:700');
+@import url('https://fonts.googleapis.com/css?family=Dosis:800');
+
+html{
+    min-height:100%;/* make sure it is at least as tall as the viewport */
+    position:relative;
+}
+body{
+    height:100%;
+}
+#cloud-container1 {
+    position:absolute;
+    top:0;
+    bottom:0;
+    left:0;
+    right:0;
+    overflow:hidden;
+    width: 50%;
+    float:left;
+    z-index:-1; /* Remove this line if it's not going to be a background! */
+}
+.login-box{
+    margin: auto;
+    top:15em;
+    position:relative;
+    float:right;
+    width:60%;
+    height:60%;
+    /*background-color: red;*/
+    border-right:1px dashed black;
+
+}
+h2{
+    margin-top: -10px;
+    font-family: 'Catamaran', sans-serif;
+    font-size: 3.5vw;
+}
+#cloud-container2 {
+    position:absolute;
+    top:0;
+    bottom:0;
+    right:0;
+    overflow:hidden;
+    width: 50%;
+    float:right;
+    z-index:-1; /* Remove this line if it's not going to be a background! */
+}
+input[type=text], input[type=password], input[type=email], input[type=cemail] {
+    width: 70%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 0px solid #ccc;
+  
+}
+
+button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 30%;
+    margin-left:30%;
+    margin-right:auto;
+    font-family: 'Dosis', sans-serif;
+    font-size: 15px;
+    transform: scale(1, 1.1);
+    
+
+}
+
+button:hover {
+    opacity: 0.8;
+    font-family: 'Dosis', sans-serif;
+
+}
+::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+    font-family: 'Dosis', sans-serif;
+    font-size: 1vw;
+    opacity:0.7;
+
+  }
+
+.reg-box{
+    margin: auto;
+    top:15em;
+    left:2em;
+    position:relative;
+    float:left;
+    width:60%;
+    height:60%;
+    /*background-color: red;*/
+   
+
+}
+

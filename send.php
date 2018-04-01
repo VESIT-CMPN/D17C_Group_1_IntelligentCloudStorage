@@ -7,10 +7,8 @@
 			<body>
 				<form action="?" method="post">
 				<fieldset>
-				<legend>Request Send SuccessFully</legend>
-				<p>Kindly wait for our <i>response</i>!
-				<p>for any query:</p>
-				<p>E-mail :friendforever@gmail.com</p>
+				<legend>Account created SuccessFully</legend>
+				<p><a href="access.php">Login Page</a></p>
 				</fieldset>
 				</form>
 			</body>

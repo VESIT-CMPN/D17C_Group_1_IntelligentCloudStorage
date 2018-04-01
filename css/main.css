@@ -1,0 +1,81 @@
+@import url('https://fonts.googleapis.com/css?family=Titillium+Web:900');
+@import url('https://fonts.googleapis.com/css?family=Dosis:500');
+
+*{
+    margin:0;
+    padding:0;
+    }
+    .overlay{
+    height:100vh;
+    background-color:rgba(255, 255, 255, 0.5);
+    
+    }
+    div.bodycontainer {
+    background-image:url('../images/mainbackground.jpg');
+    background-size:     cover;                      
+    background-repeat:   no-repeat;
+    background-position: center center; 
+    height:100vh;
+ 
+    }
+
+h2{
+    font-family: 'Titillium Web', sans-serif;
+    font-size:5vw;
+    margin-left:3%;
+    color: black;
+    text-shadow: 2px 2px rgb(68, 68, 68);
+    letter-spacing: 3px;
+    
+}/*
+body {
+    margin: 0;
+    padding: 0;
+    }
+    .main {
+    position: relative;
+    }
+    div.bodycontainer {
+    
+    height: 100vh;
+    background-image:url('../images/mainbackground.jpg');
+    background-size:     cover;                      
+    background-repeat:   no-repeat;
+    background-position: center center; 
+    opacity:0.3;
+    }
+    
+    h2 {
+    position: absolute;
+    font-family: 'Titillium Web', sans-serif;
+    font-size:2vw;
+    color:white;
+    }*/
+
+div.navbutton{
+    border: 2px solid black;
+    width:10%;
+    height:10%;
+    margin: auto;
+    margin-top:10%;
+    bottom:-10em;
+    border-radius: 4px;
+}
+p{
+    font-family: 'Dosis', sans-serif;
+    letter-spacing: 5px;
+    text-align: center;
+    margin: auto;
+    position: relative;
+    margin-top: 5%;
+    font-size: 50px;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+}
+a:hover{
+    text-decoration: none;
+    color: rgb(39, 39, 39);
+}
