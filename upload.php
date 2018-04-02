@@ -33,7 +33,8 @@ if($_SESSION['login']===1)
 				<form id="upload" action="uploadProcess.php" method="post" enctype="multipart/form-data">
 					<fieldset>
 						<legend><h3>select a file</h3></legend>
-						<p id=formentry><label for="name"></label><input type="text" required name="name" id="name" placeholder="Enter a File Name*" title="Avoid Spaces"/></p>
+						<p id=formentry><label for="name"></label>
+						<input type="text" required name="name" id="name" placeholder="Enter a File Name*" title="Avoid Spaces"/></p>
 						<datalist id="quest">
                         <option value="Your favourite place">
                         </option><option value="Your First School name">
@@ -42,8 +43,12 @@ if($_SESSION['login']===1)
                         </option><option value="Person to whom you hate most">
 						</option><option value="Thinks you fear to loose">
                          </option></datalist>
-						<p id=formentry><label for="question"></label> <input name="quest" required list="quest" id="question" placeholder="Select a question or create a custom" />
-						<p id=formentry><label for="ans"></label><input type="text" required name="ans" placeholder="Answer*" id="ans"/></p>
+						<p id=formentry>
+						<label for="question"></label>
+						 <input name="quest" required list="quest" id="question" placeholder="Select a question or create a custom" />
+						<p id=formentry>
+						<label for="ans"></label>
+						<input type="text" required name="ans" placeholder="Answer*" id="ans"/></p>
 						<div id="main"><br/>
 						<p><label for="uploadme"><span id="custom">Select&nbsp;File</span></label><input type="file" id="uploadme" name="fileToUpload"/></p>
 						<p><input type="Reset" id="clear"></p>

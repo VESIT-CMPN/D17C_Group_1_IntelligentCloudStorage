@@ -31,7 +31,8 @@ if($_SESSION['login']===1)
 				<form id="upload" action="uploadProcess.php" method="post" enctype="multipart/form-data">
 					<fieldset>
 						<legend>simple steps to upload</legend>
-						<p><label for="name">Enter file Name * </label><input type="text" required name="name" id="name" placeholder="Enter" title="Avoid space between words"/></p>
+						<p><label for="name">Enter file Name * </label>
+						<input type="text" required name="name" id="name" placeholder="Enter" title="Avoid space between words"/></p>
 						<datalist id="quest">
                         <option value="Your favourite place">
                         </option><option value="Your First School name">
@@ -40,7 +41,8 @@ if($_SESSION['login']===1)
                         </option><option value="Person to whom you hate most">
 						</option><option value="Thinks you fear to loose">
                          </option></datalist>
-						<p><label for="question">Select Question :</label> <input name="quest" required list="quest" id="question" placeholder="if not in list specify here" />
+						<p><label for="question">Select Question :</label>
+						 <input name="quest" required list="quest" id="question" placeholder="if not in list specify here" />
 						<p><label for="ans">Answer : </label><input type="text" required name="ans" id="ans"/></p>
 						<div id="main">
 						<p><label for="uploadme"><span id="custom">Select&nbsp;File</span></label><input type="file" id="uploadme" name="fileToUpload"/></p>

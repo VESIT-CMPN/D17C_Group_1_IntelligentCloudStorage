@@ -1,12 +1,12 @@
 <?php
 	$target_url = "http://suzukinakamura.pythonanywhere.com/upload";           
-    $fname = 'test.jpg';
+    $fname = 'me.jpg';
 
     $cfile = new CURLFile(realpath($fname));
 
         $post = array (
                   'image' => $cfile
-                  );    
+                  );
 
     $ch = curl_init();
     curl_setopt($ch, CURLOPT_URL, $target_url);
@@ -25,6 +25,7 @@
     if ($result === FALSE) {
         echo "Error sending" . $fname .  " " . curl_error($ch);
         curl_close ($ch);
+        
     }else{
         curl_close ($ch);
         echo  "Result: " . $result;

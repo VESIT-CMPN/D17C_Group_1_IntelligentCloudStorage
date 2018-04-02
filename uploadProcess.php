@@ -10,13 +10,14 @@
             session_start();
             
             function getLabel($fname){
-                $target_url = "http://suzukinakamura.pythonanywhere.com/upload";
+                $target_url = "http://suzukinakamura.pythonanywhere.com/upload";           
+                //$fname = 'test.jpg';
 
                 $cfile = new CURLFile(realpath($fname));
 
                     $post = array (
                             'image' => $cfile
-                            );    
+                            );
 
                 $ch = curl_init();
                 curl_setopt($ch, CURLOPT_URL, $target_url);
@@ -144,10 +145,12 @@
                         print_r($res);
 
                         $db->disconnect();
+                        
                         echo '<script language="javascript">';
                         echo 'alert("uploaded to => ' . $new_folder . '");';
                         echo 'window.location = "upload.php"';
                         echo '</script>';
+                        
                         //header('Location:upload.php');
                     }else{
                         echo 'Database Connection error';
@@ -162,6 +165,6 @@
             
         ?>
         <br>
-        <span style="float:center;color:red;"><a href="index.php">Logout</a></span>
+        <span style="float:center;color:red;"><a href="access.php">Logout</a></span>
     </body>
 </html>
